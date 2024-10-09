@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: #00FF00;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#terminal {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    border: 2px solid #00FF00;
+    background-color: #001a00;
+}
+
+input {
+    background-color: black;
+    color: #00FF00;
+    font-family: inherit;
+    border: 2px solid #00FF00;
+    padding: 5px;
+    width: 60%;
+}
+
+button {
+    background-color: #00FF00;
+    color: black;
+    font-family: inherit;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009900;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #00FF00;
+}
