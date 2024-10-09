@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge - DEADSEC</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
+        }
+        #terminal {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            border: 2px solid #00FF00;
+            background-color: #001a00;
+        }
+        input {
+            background-color: black;
+            color: #00FF00;
+            font-family: inherit;
+            border: 2px solid #00FF00;
+            padding: 5px;
+            width: 60%;
+        }
+        button {
+            background-color: #00FF00;
+            color: black;
+            font-family: inherit;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #009900;
+        }
+        .center {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <h1>Welcome to the CTF Challenge!</h1>
+        <p>There are multiple flags hidden. Find the right flag to win the prize!</p>
+        
+        <div id="game-output">
+            <p>Choose a difficulty and try to find the correct flag:</p>
+            <ul>
+                <li>Easy</li>
+                <li>Intermediate</li>
+                <li>Hard</li>
+                <li>Expert</li>
+                <li>Final</li>
+            </ul>
+        </div>
+
+        <input type="text" id="flag-input" placeholder="Enter the flag here">
+        <button onclick="verifyFlag()">Verify Flag</button>
+
+        <div id="message-output"></div>
+
+        <div class="center">
+            <a href="https://www.instagram.com/davycipher/" target="_blank">
+                <button>Connect with Davycipher on Instagram</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Davycipher</p>
+    </footer>
+
+    <script>
+        const realFlags = {
+            easy: "FLAG{DEADSEC}",
+            intermediate: "FLAG{D3ADs3c}",
+            hard: "FLAG{DeadE17hC}",
+            expert: "FLAG{D34dC0d3}",
+            final: "FL4G{DEADSEC}"  // Real final flag
+        };
+
+        function verifyFlag() {
+            const input = document.getElementById('flag-input').value.trim();
+            const messageOutput = document.getElementById('message-output');
+
+            if (input === realFlags.final) {
+                messageOutput.innerHTML = `
+                    <p>Congratulations! You've found the final flag!</p>
+                    <p>Contact me on <a href="https://www.instagram.com/davycipher/" target="_blank">Instagram</a> to claim your prize!</p>
+                `;
+            } else if (Object.values(realFlags).includes(input)) {
+                messageOutput.innerHTML = `
+                    <p>Good job! You've found a flag, but it's not the final one. Keep searching!</p>
+                `;
+            } else {
+                messageOutput.innerHTML = `
+                    <p>Invalid flag. Try again or choose a different difficulty.</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
