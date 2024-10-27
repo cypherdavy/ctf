@@ -1,46 +1,73 @@
 body {
-    background-color: black;
-    color: #00FF00;
-    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #ff4d4d;
+    overflow: hidden;
 }
 
-#terminal {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    transform: rotateY(15deg);
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+}
+
+p {
+    font-size: 1.2rem;
+    text-shadow: 0 0 15px #ff4d4d;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.about, .features {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff4d4d;
     padding: 20px;
-    margin: 0 auto;
-    max-width: 800px;
-    border: 2px solid #00FF00;
-    background-color: #001a00;
+    border-radius: 10px;
+    transform: rotateY(-15deg);
+    box-shadow: 0 0 20px #ff4d4d;
 }
 
-input {
-    background-color: black;
-    color: #00FF00;
-    font-family: inherit;
-    border: 2px solid #00FF00;
-    padding: 5px;
-    width: 60%;
+h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 15px #ff4d4d;
 }
 
 button {
-    background-color: #00FF00;
-    color: black;
-    font-family: inherit;
+    background-color: #ff4d4d;
+    color: #fff;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #009900;
+    background-color: #cc0000;
+    transform: scale(1.05);
 }
 
-.center {
+.footer {
+    position: absolute;
+    bottom: 10px;
     text-align: center;
-    margin-top: 20px;
-}
-
-footer {
-    margin-top: 50px;
-    text-align: center;
-    color: #00FF00;
 }
