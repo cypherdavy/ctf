@@ -3,41 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTF Challenge - DEADSEC</title>
+    <title>Hexploit Community</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="terminal">
-        <h1>Welcome to the CTF Challenge!</h1>
-        <p>There are multiple flags hidden. Find the right flag to win the prize!</p>
-        
-        <div id="game-output">
-            <p>Choose a difficulty and try to find the correct flag:</p>
-            <ul>
-                <li>Easy</li>
-                <li>Intermediate</li>
-                <li>Hard</li>
-                <li>Expert</li>
-                <li>Final</li>
-            </ul>
-        </div>
-
-        <input type="text" id="flag-input" placeholder="Enter the flag here">
-        <button onclick="verifyFlag()">Verify Flag</button>
-
-        <div id="message-output"></div>
-
-        <div class="center">
-            <a href="https://www.instagram.com/davycipher/" target="_blank">
-                <button>Connect with Davycipher on Instagram</button>
-            </a>
-        </div>
+    <div class="container">
+        <header class="header">
+            <h1>Welcome to the Hexploit Community</h1>
+            <p>Your hub for cybersecurity enthusiasts.</p>
+        </header>
+        <main class="main-content">
+            <section class="about">
+                <h2>About Us</h2>
+                <p>We are a community of ethical hackers and cybersecurity professionals dedicated to sharing knowledge and skills.</p>
+                <button onclick="location.href='join.html'">Join Us</button>
+            </section>
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Live CTF Events</li>
+                    <li>Workshops and Tutorials</li>
+                    <li>Networking Opportunities</li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 Hexploit Community. All Rights Reserved.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>Created by Davycipher</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
